@@ -24,7 +24,6 @@ playerscale = 50
 playerpath = "downloads/red square.jpg"
 player = pygame.image.load(playerpath)
 player = pygame.transform.scale(player, (playerscale, playerscale))
-playerrect = player.get_rect(topleft=(playerx, playery))
 
 
 # otherguy
@@ -33,7 +32,6 @@ otherguyy = 150
 otherguyscale = 50
 other = pygame.image.load(playerpath)
 other = pygame.transform.scale(other, (otherguyscale, otherguyscale))
-otherrect = other.get_rect(topleft=(otherguyx, otherguyy)) 
 
 
 
@@ -74,10 +72,11 @@ while True:
 	
 	screen.fill(BLACK)
 
+	playerrect = pygame.Rect(playerx, playery, 50, 50)
+	otherrect = pygame.Rect(otherguyx, otherguyy, 50, 50)
 
-
-	screen.blit(player, (playerrect.x, playerrect.y))
-	screen.blit(other, (otherrect.x, otherrect.y))
+	screen.blit(player, (playerx.x, playery.y))
+	screen.blit(other, (otherguyx, otherguyy.y))
 
 	pygame.display.flip()
 
