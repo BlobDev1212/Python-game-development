@@ -64,11 +64,7 @@ while True:
 			print('collide!')
 			collisioncheck = True
 	else:
-		collisioncheck = False	
-
-
-	playerrect.topleft = (playerx, playery) 
-	otherrect.topleft = (otherguyx, otherguyy)
+		collisioncheck = False
 	
 	screen.fill(BLACK)
 
