@@ -71,8 +71,8 @@ while True:
 	playerrect = pygame.Rect(playerx, playery, 50, 50)
 	otherrect = pygame.Rect(otherguyx, otherguyy, 50, 50)
 
-	screen.blit(player, (playerx.x, playery.y))
-	screen.blit(other, (otherguyx, otherguyy.y))
+	screen.blit(player, (playerx, playery))
+	screen.blit(other, (otherguyx, otherguyy))
 
 	pygame.display.flip()
 
